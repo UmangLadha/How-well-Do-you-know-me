@@ -5,7 +5,7 @@ var score = 0;
 // data of high score
 var highScores = [
   {
-    name: "Tanay",
+    name: "Umang",
     score: 3,
   },
 
@@ -18,33 +18,33 @@ var highScores = [
 // array of objects
 var questions = [{
   question: "Where do I live? ",
-  answer: "Bangalore"
+  answer: "Jaipur"
 }, {
-  question: "My favorite superhero would be? ",
-  answer: "Dhruv"
+  question: "My favorite superhero from Marvel Movies would be? ",
+  answer: "Dr. Strange"
 },
 {
-  question: "Where do I work? ",
-  answer: "Microsoft"
+  question: "Which is my favorite place to visit in India? ",
+  answer: "Mumbai"
 }];
 
 function welcome() {
  var userName = readlineSync.question("What's your name? ");
 
-  console.log("Welcome "+ userName + " to DO YOU KNOW Tanay?");
+  console.log("Welcome "+ userName + " to Do You Know Umang?");
 }
 
 
 // play function
 function play(question, answer) {
   var userAnswer = readlineSync.question(question);
-
   if (userAnswer.toUpperCase() === answer.toUpperCase()) { // branching
     console.log("right!");
     score = score + 1;
     
   } else {
     console.log("wrong!");
+    console.log("Correct Answer is "+ answer);
    
   }
 
